@@ -33,16 +33,17 @@
       {% for item in product %}
         <div class="card mb-3 p-3" style="box-shadow: 2px 3px 10px grey;">
           <div class="row g-0">
-            <div class="col-md-4" style="width: 200px; height: auto;">
-              <img src="{{product_img[item] | safe}}" class="img-fluid rounded-start" style="object-fit: contain;" alt="..."> 
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">{{item | safe}}</h5>
-                <p class="card-text"><b class="text-muted">{{product[item] | safe}}</b></p>
-                <p class="card-text">{{products[item] | safe}}</p>
+              <div class="col-md-3">
+                  <img src="{{product_img[item] | safe}}" class="img-fluid rounded-start" 
+                      style="object-fit: contain; width: 180px; height: 200px;" alt="...">
               </div>
-            </div>
+              <div class="col-md-9">
+                  <div class="card-body">
+                      <h5 class="card-title">{{item | safe}}</h5>
+                      <p class="card-text"><b class="text-muted">{{product[item] | safe}}</b></p>
+                      <p class="card-text">{{products[item] | safe}}</p>
+                  </div>
+              </div>
           </div>
         </div>
       {% endfor %}
